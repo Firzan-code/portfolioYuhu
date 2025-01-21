@@ -1,0 +1,119 @@
+.skill {
+  width: 100%;
+  height: 100vh;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.skill .skill-container {
+  margin: auto;
+  width: 80%;
+}
+.skill .skill-container .skill-content .skill-content-header {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  color: var(--font-color);
+  padding: 30px 0;
+  border-bottom: 1px solid var(--head-line-color);
+  padding-top: 5em;
+}
+.skill .skill-container .skill-content .skill-content-header h2 {
+  text-transform: uppercase;
+}
+.skill .skill-container .skill-content .skill-content-tera {
+  width: 100%;
+  padding: 2em 4em;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+  gap: 1em;
+}
+.skill .skill-container .skill-content .skill-content-tera .box-skill {
+  width: 30%;
+  height: 5em;
+  background-color: #1b1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.skill
+  .skill-container
+  .skill-content
+  .skill-content-tera
+  .box-skill
+  .logo-skill
+  img {
+  width: 40px;
+  margin-left: 3.5em;
+}
+.skill
+  .skill-container
+  .skill-content
+  .skill-content-tera
+  .box-skill
+  .desk-kreator-skill {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  flex-direction: column;
+}
+.skill
+  .skill-container
+  .skill-content
+  .skill-content-tera
+  .box-skill
+  .desk-kreator-skill
+  .desk-skill {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: var(--font-color);
+  transition: transform 0.3s ease, transform 0.3s ease;
+  transform: translateY(10px); /* Posisi awal sedikit bergeser ke bawah */
+}
+.skill
+  .skill-container
+  .skill-content
+  .skill-content-tera
+  .box-skill:hover
+  .desk-skill {
+  transform: translateX(0px); /* Posisi awal sedikit bergeser ke bawah */
+}
+.skill
+  .skill-container
+  .skill-content
+  .skill-content-tera
+  .box-skill
+  .desk-kreator-skill
+  .desk-level-skill {
+  font-size: 0.8em;
+  font-weight: lighter;
+  display: block;
+  color: var(--font-color);
+  text-transform: uppercase;
+  opacity: 0; /* Awalnya transparan */
+  transform: translateY(10px); /* Posisi awal sedikit bergeser ke bawah */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Tambahkan transisi */
+}
+.skill
+  .skill-container
+  .skill-content
+  .skill-content-tera
+  .box-skill:hover
+  .desk-level-skill {
+  display: block;
+  opacity: 1; /* Transparansi penuh saat hover */
+  transform: translateY(0); /* Geser kembali ke posisi awal */
+}
+@media only screen and (max-width: 768px) {
+  .skill .skill-container .skill-content .skill-content-tera {
+    flex-direction: column;
+    padding: 1em 2em;
+  }
+  .skill .skill-container .skill-content .skill-content-tera .box-skill {
+    width: 100%;
+  }
+}

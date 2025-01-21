@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "TheFont";
+  src: url("https://garet.typeforward.com/assets/fonts/shared/TFMixVF.woff2")
+    format("woff2");
+}
+.home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home .home-container {
+  width: 80%;
+}
+
+.home .home-container .home-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: content-left content-right;
+}
+.home .home-container .home-content .home-content-left {
+  font-family: var(--font-content);
+  color: var(--font-color);
+  text-transform: capitalize;
+  grid-template-areas: "content-left";
+  position: relative;
+}
+.home .home-container .home-content .home-content-left h3,
+.creator-job {
+  font-size: 2em;
+}
+.home .home-container .home-content .home-content-left .creator-name {
+  font-weight: bold;
+  font-size: 2.5em;
+  padding: 20px 0;
+}
+.home
+  .home-container
+  .home-content
+  .home-content-left
+  .creator-name
+  .gold-text {
+  color: var(--head-line-color);
+}
+.home .home-container .home-content .home-content-left .creator-job {
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.home .home-container .home-content .home-content-right {
+  grid-template-areas: "content-right";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "TheFont";
+  position: relative;
+  z-index: -999;
+}
+.home .home-container .home-content .home-content-right span {
+  color: var(--font-color);
+  font-size: clamp(5vw, 10vw, 20vh);
+  animation: letter-breathe 3s ease-in-out infinite;
+}
+@keyframes letter-breathe {
+  from,
+  to {
+    font-variation-settings: "wght" 100;
+  }
+
+  50% {
+    font-variation-settings: "wght" 900;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .home .home-container .home-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      content-left
+      content-right;
+    gap: 80px;
+  }
+  .home .home-container .home-content .home-content-right span {
+    font-size: clamp(15vw, 25vw, 35vh);
+  }
+  .home .home-container .home-content .home-content-left h3,
+  .creator-jobP {
+    font-size: 1.5em;
+  }
+  .home .home-container .home-content .home-content-left .creator-name {
+    font-size: 2em;
+    padding: 20px 0;
+  }
+}

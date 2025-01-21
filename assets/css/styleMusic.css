@@ -1,0 +1,109 @@
+.music {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.music .music-container {
+  width: 80%;
+  box-sizing: border-box;
+}
+.music .music-container .music-header {
+  color: var(--font-color);
+  display: grid;
+  place-items: center;
+  padding-bottom: 3em;
+  border-bottom: 1px solid var(--head-line-color);
+}
+.music .music-container .music-header h2 {
+  text-transform: uppercase;
+}
+.music .music-container .music-content {
+  width: 80%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  gap: 1;
+  padding-top: 2em;
+  position: relative;
+}
+.music .music-container .card {
+  background-color: #111;
+  color: var(--font-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 13em;
+  border-radius: 0.3em;
+  padding: 1em;
+  position: relative;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.music .music-container .card .img-holder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.3em;
+}
+.music .music-container .card .text {
+  margin-top: 1em;
+  line-height: 1;
+}
+.music .music-container .card .text h2 {
+  font-size: 1.2em;
+}
+.music .music-container .card .text p {
+  font-size: 0.9em;
+  margin-top: 0.5em;
+  font-weight: 500;
+  color: gray;
+}
+.music .music-container .card .play-icon {
+  position: absolute;
+  top: 45%;
+  right: 12%;
+  transform: translateY(10px);
+  filter: drop-shadow(0 0.5em 1em rgba(0, 0, 0, 0.4));
+  opacity: 0;
+  transform: all 0.4s;
+}
+.music .music-container .card:hover .play-icon {
+  opacity: 1;
+  transform: translateY(0);
+}
+.music .music-container .card:hover {
+  background-color: #222;
+}
+.music .music-container .card .play-icon .circle {
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+  background-color: rgb(50, 233, 50);
+  display: grid;
+  place-items: center;
+  transform: scale(0.95);
+}
+.music .music-container .card .play-icon .circle i {
+  font-size: 1.5em;
+  line-height: 1;
+  color: black;
+}
+
+.music .music-container .card .play-icon:hover .circle {
+  cursor: auto;
+  transform: scale(1);
+}
+@media only screen and (max-width: 768px) {
+  .music .music-container .music-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+  .music .music-container .music-content .card {
+    margin: auto;
+  }
+}
